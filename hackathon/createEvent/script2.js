@@ -22,8 +22,6 @@ document.addEventListener("DOMContentLoaded", function() {
     function createEvent() {
         const eventName = document.getElementById('eventName').value;
         const eventDate = document.getElementById('eventDate').value;
-        const startTime = document.getElementById('startTime').value;
-        const endTime = document.getElementById('endTime').value;
         const eventDescription = document.getElementById('eventDescription').value;
         const postcode = document.getElementById('postcode').value;
 
