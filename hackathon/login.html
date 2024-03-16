@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="login.css">
+    <script src="login.js"></script>
 </head>
 <body>
     <h1>Welcome to (App name)</h1>
     <div class="outer-container">
     <div class="login-container">
         
-    <form>
+    <form id="login-form">
         <div class="u">
         <label for="username">Username</label>
         </div>
@@ -22,7 +23,7 @@
         <label for="password">Password</label>
         </div>
         <div class="i">
-        <input id="password" type="text"  name="password" class="centre-placeholder"  placeholder="Password" required>
+        <input id="password" type="password"  name="password" class="centre-placeholder"  placeholder="Password" required>
     </div>
         <div class="b">
         <button type="submit">Login</button>
