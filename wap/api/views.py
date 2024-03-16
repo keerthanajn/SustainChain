@@ -26,17 +26,16 @@ class getallusers(APIView):
         return JsonResponse(mains,safe=False)
 
 class postallpostcomments(APIView):
-    @csrf_exempt  # This decorator is used to allow POST requests without CSRF token
-    def projectsp(request):
-        objs = Login.objects.all()
-        mains = []
-        for i in objs:
-            js = {}
-            js["username"]=i.username
-            js["password"]=i.password
-            js["name"] = i.name
-            mains.append(js)
-        return JsonResponse(mains,safe=False)
+    @csrf_exempt  # Only if you're not using CSRF protection for this view
+    def create_event_view(request):
+        if request.method == 'POST':
+            # Process the incoming data to create the event
+            # Save the event data to the database
+            # Return a JSON response indicating success or failure
+            return JsonResponse({'message': 'Event created successfully'}, status=201)
+        else:
+            # Handle GET or other HTTP methods if needed
+            return JsonResponse({'error': 'Method not allowed'}, status=405)
     
 class getallprojects(APIView):
     def projects(request):
