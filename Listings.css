@@ -135,6 +135,7 @@
     margin-right: 20px; /* Add some spacing between "Sign In" and the logo */
     transition: color 0.3s ease;
   }
+
   
   .user-actions a:hover {
     color: #007bff; /* Change to desired hover color */
