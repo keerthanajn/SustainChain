@@ -172,3 +172,10 @@ img{
     width:150px;
     height:200px;
 }
+
+#error-message {
+  color: rgb(188, 72, 72);
+  
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  /* Add other styles as needed */
+}
