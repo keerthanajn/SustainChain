@@ -4,10 +4,8 @@ from django.shortcuts import render
 # views.py
 from rest_framework.views import APIView
 from django.http import JsonResponse
-from rest_framework import status
 from db.models import *
 from .serializers import *
-from django.contrib.auth import authenticate
 from django.views.decorators.csrf import csrf_exempt
 
 
@@ -38,8 +36,42 @@ class getallpostcomments(APIView):
             js["name"] = i.name
             mains.append(js)
         return JsonResponse(mains,safe=False)
+class getallprojects(APIView):
+    def projects(request):
+        projects = Projects.objects.all()
+            # Serialize project objects to JSON
+        projects_json = []
+        for project in projects:
+            project_data = {
+                'projectID': project.projectID,
+                'projectName': project.projectName,
+                'description': project.description,
+                'category': project.category.name,
+                'created': project.created.strftime('%Y-%m-%d'),  # Format the date as string
+                'user': project.user.username  # Assuming Login model has a field named username
+            }
+            projects_json.append(project_data)
+        return JsonResponse(projects_json, safe=False)
+class getallsignedup(APIView):
+    def signedup(request):
+        signedUp = SignedupList.objects.all()
+            # Serialize project objects to JSON
+        Signed_json = []
+        for signed in signedUp:
+            signed_data = {
+                'projectID': signed.projectID,
+                'username': signed.projectName,
+            }
+            Signed_json.append(signed_data)
+        return JsonResponse(signed_data, safe=False)
+
 
     
+
+
+
+def home(request):
+    return render(request,'base.html')
 
 
 # @api_view(['GET'])
