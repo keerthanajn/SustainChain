@@ -66,27 +66,27 @@ form {
     margin-bottom: 20px; /* Add space between heading and button */
 }
 
-.sustainability-section .section-heading {
+.category-section .section-heading {
     margin-bottom: 20px; /* Add space between heading and buttons */
 }
 
-.sustainability-buttons {
+.category-buttons {
     display: flex; /* Arrange buttons horizontally */
     justify-content: center; /* Center buttons horizontally */
 }
 
-.sustainability-buttons .button-with-icon {
+.category-buttons .button-with-icon {
     display: flex;
     align-items: center;
     margin-bottom: 10px; /* Add margin between each button */
 }
 
-.sustainability-buttons .button-with-icon img {
+.category-buttons .button-with-icon img {
     width: 30px; /* Adjust the size of the image as needed */
     margin-right: 10px; /* Add spacing between the image and the button */
 }
 
-.sustainability-buttons button {
+.category-buttons button {
     padding: 8px 35px;
     background-color: #2bae7a;
     color: #fff;

@@ -7,6 +7,7 @@ from django.http import JsonResponse
 from db.models import *
 from .serializers import *
 from django.views.decorators.csrf import csrf_exempt
+import json
 
 
 
@@ -28,13 +29,53 @@ class getallusers(APIView):
 class postallpostcomments(APIView):
     @csrf_exempt  # Only if you're not using CSRF protection for this view
     def create_event_view(request):
+        print(request.method)
         if request.method == 'POST':
-            # Process the incoming data to create the event
-            # Save the event data to the database
-            # Return a JSON response indicating success or failure
-            return JsonResponse({'message': 'Event created successfully'}, status=201)
+            try:
+                # Parse the JSON data from the request body
+                data = json.loads(request.body)
+                
+                # Extract event data from the JSON
+                # project_id = data.get('projectID')
+                project_name = data.get('projectName')
+                description = data.get('eventDescription')
+                category = data.get('categoryOption')
+                postcode = data.get('postcode')
+                user = data.get('user')
+
+                login_instance = Login.objects.get(username=user)
+                category_instance = Category.objects.get(name=category)
+                # Create the event in the database
+                project = Project.objects.create(
+                    # projectID=project_id,
+                    projectName=project_name,
+                    description=description,
+                    category=category_instance,
+                    postcode=postcode,
+                    user=login_instance
+                )
+                
+                # Optionally, you can return the newly created project data as a JSON response
+                return JsonResponse({'message': 'Event created successfully', 'project': {
+                    'projectID': project.projectID,
+                    'projectName': project.projectName,
+                    'eventDescription': project.description,
+                    'categoryOption': project.category.name,
+                    'created': project.created,
+                    'postcode': project.postcode,
+                    'user': project.user.username
+                }}, status=201)
+            
+            except json.JSONDecodeError as e:
+                return JsonResponse({'error': 'Invalid JSON format'}, status=400)
+            
+            except KeyError as e:
+                return JsonResponse({'error': f'Missing required field: {e}'}, status=400)
+            
+            except Exception as e:
+                return JsonResponse(print({'error': str(e)}), status=500)
+            
         else:
-            # Handle GET or other HTTP methods if needed
             return JsonResponse({'error': 'Method not allowed'}, status=405)
     
 class getallprojects(APIView):
