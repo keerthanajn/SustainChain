@@ -7,4 +7,5 @@ admin.site.register(Category)
 admin.site.register(Projects)
 admin.site.register(Project)
 admin.site.register(SignedupList)
+admin.site.register(tokens)
 

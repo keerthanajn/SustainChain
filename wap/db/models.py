@@ -32,5 +32,7 @@ class Project(models.Model):
 class SignedupList(models.Model):
     projectID = models.ForeignKey(Projects, on_delete=models.CASCADE)
     username = models.ForeignKey(Login, on_delete=models.CASCADE, unique=True)
-
+class tokens(models.Model):
+    user = models.ForeignKey(Login, on_delete=models.CASCADE)
+    tokens = models.BigIntegerField(max_length=100000)
 

@@ -117,6 +117,21 @@ class getallsignedup(APIView):
             Signed_json.append(signed_data)
         return JsonResponse(signed_data, safe=False)
 
+class getalltokens(APIView):
+    def tokens(request):
+        token = tokens.objects.all()
+        token_json = []
+        
+        for i in token:
+            print(i.user.username)
+            token_data = { 
+                'user': i.user.username,
+                'tokens': i.tokens,
+            }
+            token_json.append(token_data)
+        return JsonResponse(token_json, safe=False)
+
+
 
     
 
