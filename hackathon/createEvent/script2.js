@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         const eventDate = document.getElementById('eventDate').value;
         const eventDescription = document.getElementById('eventDescription').value;
         const postcode = document.getElementById('postcode').value;
+        const user = "Aryaa"
 
         if (eventName && eventDate && eventDescription && postcode) {
             const eventData = {
@@ -42,6 +43,7 @@ document.addEventListener("DOMContentLoaded", async function() {
                 sustainabilityOption: sustainabilityOption,
                 locationOption: locationOption,
                 categoryOption: categoryOption,
+                user: user
             };
 
             console.log("Event Data:", eventData);
