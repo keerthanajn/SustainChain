@@ -8,3 +8,5 @@ for windows
 python manage.py runserver
 ```
 If gives errors download the libraries it shows that are needed
+
+wap is the Backend folder
