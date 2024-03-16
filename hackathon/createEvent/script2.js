@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", async function() {
 
     // Function for Create Event button
     function createEvent() {
+        const projectID = 1;
         const eventName = document.getElementById('eventName').value;
         const eventDate = document.getElementById('eventDate').value;
         const eventDescription = document.getElementById('eventDescription').value;
@@ -36,6 +37,7 @@ document.addEventListener("DOMContentLoaded", async function() {
 
         if (eventName && eventDate && eventDescription && postcode) {
             const eventData = {
+                projectID: projectID,
                 eventName: eventName,
                 eventDate: eventDate,
                 eventDescription: eventDescription,
@@ -48,6 +50,29 @@ document.addEventListener("DOMContentLoaded", async function() {
 
             console.log("Event Data:", eventData);
 
+            // Send POST request to the backend server
+            fetch("http://127.0.0.1:8000/createevent/", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(eventData)
+            })
+            .then(response => {
+                if (response.ok) {
+                    console.log("Event created successfully!");
+                    // Reset options
+                    sustainabilityOption = null;
+                    locationOption = null;
+                    categoryOption = null;
+                } else {
+                    throw new Error('Failed to create event.');
+                }
+            })
+            .catch(error => {
+                console.error("Error creating event:", error);
+            });
+            
             sustainabilityOption = null;
             locationOption = null;
             categoryOption = null;
