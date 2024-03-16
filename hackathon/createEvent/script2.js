@@ -1,9 +1,17 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", async function() {
     // Global variables to store selected options
     let sustainabilityOption = null;
     let locationOption = null;
     let categoryOption = null;
-    let uploadedImage = null;
+
+    // Load options data from optionsData.json
+    const optionsResponse = await fetch('optionsData.json');
+    const optionsData = await optionsResponse.json();
+
+    // Extract options from optionsData
+    const sustainabilityOptions = optionsData.sustainabilityOptions;
+    const locationOptions = optionsData.locationOptions;
+    const categoryOptions = optionsData.categoryOptions;
 
     // Add event listeners to buttons
     document.getElementById("exitButton").addEventListener("click", exitPage);
@@ -25,18 +33,15 @@ document.addEventListener("DOMContentLoaded", function() {
         const eventDescription = document.getElementById('eventDescription').value;
         const postcode = document.getElementById('postcode').value;
 
-        if (eventName && eventDate && startTime && endTime && eventDescription && postcode) {
+        if (eventName && eventDate && eventDescription && postcode) {
             const eventData = {
                 eventName: eventName,
                 eventDate: eventDate,
-                startTime: startTime,
-                endTime: endTime,
                 eventDescription: eventDescription,
                 postcode: postcode,
                 sustainabilityOption: sustainabilityOption,
                 locationOption: locationOption,
                 categoryOption: categoryOption,
-                uploadedImage: uploadedImage
             };
 
             console.log("Event Data:", eventData);
@@ -44,7 +49,6 @@ document.addEventListener("DOMContentLoaded", function() {
             sustainabilityOption = null;
             locationOption = null;
             categoryOption = null;
-            uploadedImage = null;
         } else {
             alert("Please fill in all fields before creating an event.");
         }
@@ -68,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Add event listeners to location buttons
-    document.querySelectorAll(".location-buttons button").forEach(button => {
+    document.querySelectorAll(".location-buttons button").forEach(button  => {
         button.addEventListener("click", function(event) {
             // Prevent the default form submission behavior
             event.preventDefault();
