@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create an Event</title>
+    <link rel="stylesheet" href="index2.css"> <!-- Corrected CSS file name -->
+</head>
+<body>
+    <div class="container">
+        <h1>Create your personalised event!</h1>
+        <form action="#">
+            <div class="title-section">
+                <h2 class="section-heading">What's the title of your event?</h2>
+                <div class="title-inputs">
+                    <div class="title-fields">
+                        <span class="description">Decide on the title of your event! It can be anything like Beach Cleanup etc.</span>
+                        <input type="text" id="eventName" name="eventName" required placeholder="Event title">
+                    </div>
+                </div>
+            </div>
+        
+        <div class="datetime-section">
+            <h2 class="section-heading">When is the event going to happen?</h2>
+            <div class="datetime-inputs">
+                <div class="datetime-fields">
+                    <label for="eventDate">Event Date:</label>
+                    <input type="date" id="eventDate" name="eventDate" required>
+        
+                    <label for="startTime">Start Time:</label>
+                    <input type="time" id="startTime" name="startTime" required>
+        
+                    <label for="endTime">End Time:</label>
+                    <input type="time" id="endTime" name="endTime" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="sustainability-section">
+            <h2 class="section-heading">How you want to be sustainable?</h2>
+            <div class="sustainability-buttons">
+                <div class="button-with-icon">
+                    <img src="images/education-icon.png" alt="Education Icon">
+                    <button id="educationBtn">Education and Awareness Events</button>
+                </div>
+                <div class="button-with-icon">
+                    <img src="images/community-icon.jpg" alt="Community Icon">
+                    <button id="communityBtn">Community Engagement and Action Events</button>
+                </div>
+                <div class="button-with-icon">
+                    <img src="images/technology-icon.png" alt="Technology Icon">
+                    <button id="technologyBtn">Technology and Innovation Events</button>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="description-section">
+            <h2 class="section-heading">What's going to happen in the event?</h2>
+            <div class="description-inputs">
+                <div class="description-fields">
+                    <span class="description">Describe all exciting details of the event!</span>
+                    <textarea id="eventDescription" name="eventDescription" rows="4" required placeholder="Description"></textarea>
+                </div>
+            </div>
+        </div>
+        
+        <div class="postcode-section">
+            <h2 class="section-heading">Where does the event uphold?</h2>
+            <div class="postcode-inputs">
+                <div class="postcode-fields">
+                    <span class="description">Postcode will give the event attenders the idea of its location!</span>
+                    <input type="text" id="postcode" name="postcode" pattern="[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}" title="Enter a valid UK postcode" required placeholder="A0 0AA">
+                </div>
+            </div>
+        </div>
+
+        <div class="location-section">
+            <h2 class="section-heading">How is going to happen?</h2>
+            <div class="location-buttons">
+                <div class="button-with-icon">
+                    <img src="images/online-event-icon.jpg" alt="Online Event Icon">
+                    <button id="onlineBtn">Online Event</button>
+                </div>
+                <div class="button-with-icon">
+                    <img src="images/venue-icon.jpeg" alt="Venue Icon">
+                    <button id="venueBtn">Venue</button>
+                </div>
+                <div class="button-with-icon">
+                    <img src="images/tba-icon.jpeg" alt="To Be Announced Icon">
+                    <button id="tbaBtn">To Be Announced</button>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="category-section">
+            <h2 class="section-heading">How many people you expect to come?</h2>
+            <p class="category-description">As the event creator, you will receive 50 Tokens initially. Participants will receive an additional 5 Tokens for joining.</p>
+            <div class="category-buttons">
+                <button id="size8to15">8 to 15</button>
+                <button id="size15to20">15 to 20</button>
+                <button id="size20to30">20 to 30</button>
+                <button id="size30to50">30 to 50</button>
+                <button id="size50to100">50 to 100</button>
+                <button id="size100to500">100 to 500</button>
+                <button id="size500plus">500+</button>
+            </div>
+        </div>
+        
+        <div class="image-section">
+            <h2 class="section-heading">Attach Event Image</h2>
+            <button id="uploadImageButton" class="upload-btn">Choose Image</button>
+        </div>
+        </form>
+    </div>
+    <footer>
+        <button id="exitButton">Exit</button>
+        <button id="createEventButton">Create Event</button>
+    </footer>
+<script src="eventData.json"></script>
+<script src="script2.js"></script>
+</body>
+</html>
