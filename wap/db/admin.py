@@ -5,5 +5,6 @@ from .models import *
 admin.site.register(Login)
 admin.site.register(Category)
 admin.site.register(Projects)
+admin.site.register(Project)
 admin.site.register(SignedupList)
 

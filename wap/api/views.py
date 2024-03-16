@@ -38,7 +38,7 @@ class getallpostcomments(APIView):
         return JsonResponse(mains,safe=False)
 class getallprojects(APIView):
     def projects(request):
-        projects = Projects.objects.all()
+        projects = Project.objects.all()
             # Serialize project objects to JSON
         projects_json = []
         for project in projects:
@@ -48,6 +48,7 @@ class getallprojects(APIView):
                 'description': project.description,
                 'category': project.category.name,
                 'created': project.created.strftime('%Y-%m-%d'),  # Format the date as string
+                'postcode': project.postcode,
                 'user': project.user.username  # Assuming Login model has a field named username
             }
             projects_json.append(project_data)

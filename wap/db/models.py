@@ -18,9 +18,16 @@ class Projects(models.Model):
     projectName = models.CharField(max_length=200)
     description = models.TextField()
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    created = models.DateField(auto_now_add=True)
-    def __str__(self):
-         return self.category 
+    created = models.DateField(auto_now_add=True) 
+
+class Project(models.Model):
+    user = models.ForeignKey(Login, on_delete=models.CASCADE)
+    projectID = models.AutoField(primary_key=True)
+    projectName = models.CharField(max_length=200)
+    description = models.TextField()
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    postcode = models.TextField(max_length = 10)
+    created = models.DateField(auto_now_add=True) 
 
 class SignedupList(models.Model):
     projectID = models.ForeignKey(Projects, on_delete=models.CASCADE)
