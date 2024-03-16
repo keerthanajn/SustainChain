@@ -3,20 +3,31 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch("http://127.0.0.1:8000/getprojects/")
         .then(response => response.json())
         .then(projects => {
-            // Log the received projects data for debugging
-            console.log("Projects:", projects);
+            // Filter projects for user "Aryaa"
+            const aryaaProjects = projects.filter(project => project.user === "Aryaa");
 
-            // Extract the names from the JSON data
-            const name1 = projects[0].projectName; // Assuming the first project's name goes to name1
-            // Assuming the second project's name goes to name2
+            // Get the parent element where project details will be added
+            const projectsList = document.getElementById("projects-list");
 
-            // Log the extracted names for debugging
-            console.log("Name1:", name1);
-            //console.log("Name2:", name2);
+            // Iterate over Aryaa's projects and create elements to display details
+            aryaaProjects.forEach(project => {
+                // Create a div element for each project
+                const projectDiv = document.createElement("div");
+                projectDiv.classList.add("project");
 
-            // Populate names into the HTML
-            document.getElementById("name1").textContent = name1;
-            //document.getElementById("name2").textContent = name2;
+                // Populate project details inside the div
+                projectDiv.innerHTML = `
+                    <h2>${project.projectName}</h2>
+                    <p><strong>Description:</strong> ${project.description}</p>
+                    <p><strong>Category:</strong> ${project.category}</p>
+                    <p><strong>Postcode:</strong> ${project.postcode}</p>
+                `;
+
+                // Append the project div to the projects list
+                projectsList.appendChild(projectDiv);
+            });
         })
         .catch(error => console.error("Error fetching projects:", error));
 });
+
+
