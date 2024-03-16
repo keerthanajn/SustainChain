@@ -11,6 +11,7 @@ from django.views.decorators.csrf import csrf_exempt
 
 
 
+
 class getallusers(APIView):
     @csrf_exempt  # This decorator is used to allow POST requests without CSRF token
     def user_login(request):
@@ -24,9 +25,9 @@ class getallusers(APIView):
             mains.append(js)
         return JsonResponse(mains,safe=False)
 
-class getallpostcomments(APIView):
+class postallpostcomments(APIView):
     @csrf_exempt  # This decorator is used to allow POST requests without CSRF token
-    def user_login(request):
+    def projectsp(request):
         objs = Login.objects.all()
         mains = []
         for i in objs:
@@ -36,6 +37,7 @@ class getallpostcomments(APIView):
             js["name"] = i.name
             mains.append(js)
         return JsonResponse(mains,safe=False)
+    
 class getallprojects(APIView):
     def projects(request):
         projects = Project.objects.all()
@@ -49,21 +51,29 @@ class getallprojects(APIView):
                 'category': project.category.name,
                 'created': project.created.strftime('%Y-%m-%d'),  # Format the date as string
                 'postcode': project.postcode,
-                'user': project.user.username  # Assuming Login model has a field named username
+                'user': project.user.username,  # Assuming Login model has a field named username
             }
             projects_json.append(project_data)
         return JsonResponse(projects_json, safe=False)
 class getallsignedup(APIView):
+
+
     def signedup(request):
         signedUp = SignedupList.objects.all()
             # Serialize project objects to JSON
         Signed_json = []
+        sd = []
         for signed in signedUp:
-            signed_data = {
+            s = signed.username.username
+            sd.append(s)
+            signed_data = { 
                 'projectID': signed.projectID.projectID,
                 'projectName':signed.projectID.projectName,
-                'username': signed.username.username,
+                'username': sd,
+                'number': len(sd),
+                # 'number': len(signed.username)
             }
+            print(sd)
             Signed_json.append(signed_data)
         return JsonResponse(signed_data, safe=False)
 
