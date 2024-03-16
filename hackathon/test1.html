@@ -1,0 +1,68 @@
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Token Transfer</title>
+    <link rel="stylesheet" href="test1.css">
+</head>
+<body>
+    <div class="box">
+<div class="rectangle"> 
+    <div class="rectangle2"> 
+    <h2>Your Tokens: </h2>
+    <label for="to">Recipient: </label>
+    <input id="to" placeholder="Enter your wallet address" value="0xE0bAf4e13F70a8AB9D131eA443742C7Ee05De3f5"><br><br>
+
+    <label for="amount">Amount: </label>
+    <input id="amount" placeholder="Enter transfer amount" value="1"><br><br>
+   
+    <button onclick="transferToken()">Transfer</button><br><br>
+
+    <pre id="result"></pre>
+
+    <script src="https://cdn.jsdelivr.net/npm/vechain-contract.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bignumber.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@vechain/connex"></script>
+
+    <script src="test2.js"></script>
+</div>
+</div>
+    
+</div>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Token Transfer</title>
+    <link rel="stylesheet" href="test1.css">
+</head>
+<body>
+    <div class="container">
+        <div class="transfer-form">
+            <h2>Your Tokens:</h2>
+            <label for="to">Recipient:</label>
+            <input id="to" type="text" placeholder="Enter your wallet address" value="0xE0bAf4e13F70a8AB9D131eA443742C7Ee05De3f5">
+            <br><br>
+            <label for="amount">Amount:</label>
+            <input id="amount" type="text" placeholder="Enter transfer amount" value="1">
+            <br><br>
+            <button onclick="transferToken()">Transfer</button>
+            <br><br>
+            <pre id="result"></pre>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vechain-contract.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bignumber.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@vechain/connex"></script>
+    <script src="test2.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+/* test1.css */
+
+/* Define Open Sans font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+/* Global styles */
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fffafa;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height of the viewport */
+  background-image: url('back3.jpeg'); /* Add your image path here */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the background image */
+}
+
+.box {
+  height: 579px;
+  width: 1086px;
+  text-align: center;
+}
+.container {
+    position: fixed;
+    width: 900px;
+    height: 400px;
+    top: 50%; /* Position from the top at 50% */
+    left: 50%; /* Position from the left at 50% */
+    transform: translate(-50%, -50%); /* Move the container back by half its own width and height */
+    
+    border-radius: 15px;
+  }
+  
+  .transfer-form {
+    background-color: rgba(214, 247, 231, 0.8); /* Adjust the opacity and color of the background */
+    border-radius: 15px;
+    padding: 20px; /* Add padding to the form */
+  }
+  
+  .transfer-form h2 {
+    margin-bottom: 20px; /* Add spacing below the heading */
+  }
+  
+  
+  label, input, button {
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"] {
+    border: 3px solid #6ead78;
+    width: calc(100% - 30px);
+    height: 40px;
+    transition: border-color 0.3s ease;
+    border-radius: 50px;
+  }
+  
+  input[type="text"]:focus {
+    outline: none;
+    border-color: #0fd0c3;
+    box-shadow: 0 0 5px rgba(137, 216, 162, 0.5);
+    cursor: pointer;
+  }
+  
+  button {
+    width: calc(100% - 30px);
+    padding: 10px;
+    font-size: 15px;
+    background-color: #40af6b;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+
+  }
+  
+  button:hover {
+    background-color: #a9e2c7;
+  }
+  
+pre {
+  margin-top: 20px
+}
+
+
+.container {
+  position: fixed;
+  width: 1086px;
+  height: 579px;
+  top: 50%; /* Position from the top at 50% */
+  left: 50%; /* Position from the left at 50% */
+  transform: translate(-50%, -50%); /* Move the container back by half its own width and height */
+  background-color: #d6f7e7;
+  border-radius: 15px;
+}
