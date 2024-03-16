@@ -36,3 +36,5 @@ class tokens(models.Model):
     user = models.ForeignKey(Login, on_delete=models.CASCADE)
     tokens = models.BigIntegerField(max_length=100000)
 
+    
+
