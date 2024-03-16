@@ -59,8 +59,9 @@ class getallsignedup(APIView):
         Signed_json = []
         for signed in signedUp:
             signed_data = {
-                'projectID': signed.projectID,
-                'username': signed.projectName,
+                'projectID': signed.projectID.projectID,
+                'projectName':signed.projectID.projectName,
+                'username': signed.username.username,
             }
             Signed_json.append(signed_data)
         return JsonResponse(signed_data, safe=False)
