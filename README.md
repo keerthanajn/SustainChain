@@ -13,6 +13,7 @@ python3 manage.py runserver
 ```
 for windows
 ```bash
+cd wap
 python manage.py runserver
 ```
 download the required libraries
