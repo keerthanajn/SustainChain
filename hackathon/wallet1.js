@@ -96,3 +96,34 @@ function transferToken() {
         .then((r) => (resultDetails.innerText = JSON.stringify(r, null, 4)))
         .catch((e) => console.log("error:" + e.message));
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Fetch the token count from the server
+    fetch("http://127.0.0.1:8000/gettokens/")
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Failed to fetch token count');
+        }
+        return response.json();
+      })
+      .then(data => {
+        // Check if the data contains at least one user with tokens
+        if (Array.isArray(data) && data.length > 0 && typeof data[0].tokens !== 'undefined') {
+          // Update the navigation bar with the token count of the first user
+          const tokenCountElement = document.getElementById('token-count');
+          tokenCountElement.textContent = `Tokens: ${data[0].tokens}`;
+        } else {
+          console.error('Invalid response data:', data);
+          // Update the navigation bar with an error message
+          const tokenCountElement = document.getElementById('token-count');
+          tokenCountElement.textContent = 'No tokens found';
+        }
+      })
+      .catch(error => {
+        console.error("Error fetching token count:", error);
+        // Update the navigation bar with an error message
+        const tokenCountElement = document.getElementById('token-count');
+        tokenCountElement.textContent = 'Failed to fetch tokens';
+      });
+  });
+  
