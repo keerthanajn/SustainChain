@@ -48,6 +48,37 @@ document.addEventListener('DOMContentLoaded', () => {
       .catch(error => console.error("Error fetching projects:", error));
 });
 
+// Listings.js
+
+
+  // Fetch the project data from the server
+  fetch("http://127.0.0.1:8000/getsignedup/")
+    .then(response => response.json())
+    .then(projects => {
+      // Get the parent element where signed-up users will be added
+      const signedUpList = document.querySelector('.signed-up ul');
+
+      // Find the project with projectID = 1
+      const targetProject = projects.find(project => project.projectID === 1);
+
+      // Check if the project is found
+      if (targetProject) {
+        // Iterate over the usernames of signed-up users and create list items for each user
+        targetProject.username.forEach(username => {
+          // Create a list item element for each user
+          const userItem = document.createElement("li");
+          userItem.textContent = username;
+          
+          // Append the user list item to the signed-up list
+          signedUpList.appendChild(userItem);
+        });
+      
+      } else {
+        console.error("Project with projectID 1 not found.");
+      }
+    })
+    .catch(error => console.error("Error fetching projects:", error));
+
 
 
   // Fetch the projects data and render event listings
