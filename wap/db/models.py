@@ -37,9 +37,7 @@ class tokens(models.Model):
     tokens = models.BigIntegerField(max_length=100000)
 class Whitelist(models.Model):
     user = models.ForeignKey(Login, on_delete=models.CASCADE, unique=True)
-    wallet_address = models.Field(max_length=200, blank=True)
-    total_projects = models.IntegerField(default=0)
-    total_attendees = models.IntegerField(default=0)
+    walletAddress = models.CharField(max_length=200, default=0)
 
 
     

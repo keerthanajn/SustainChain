@@ -42,11 +42,12 @@ class postallpostcomments(APIView):
                 category = data.get('categoryOption')
                 postcode = data.get('postcode')
                 user = data.get('user')
+                walletaddress = data.get('wallet_address')
 
                 login_instance = Login.objects.get(username=user)
                 category_instance = Category.objects.get(name=category)
                 # Create the event in the database
-                project = Project.objects.create(
+                Project.objects.create(
                     # projectID=project_id,
                     projectName=project_name,
                     description=description,
@@ -54,17 +55,13 @@ class postallpostcomments(APIView):
                     postcode=postcode,
                     user=login_instance
                 )
+                Whitelist.objects.create(
+                    user = login_instance,
+                    walletAddress = walletaddress,
+                )
                 
                 # Optionally, you can return the newly created project data as a JSON response
-                return JsonResponse({'message': 'Event created successfully', 'project': {
-                    'projectID': project.projectID,
-                    'projectName': project.projectName,
-                    'eventDescription': project.description,
-                    'categoryOption': project.category.name,
-                    'created': project.created,
-                    'postcode': project.postcode,
-                    'user': project.user.username
-                }}, status=201)
+                return JsonResponse({'message': 'Event created successfully', }, status=201)
             
             except json.JSONDecodeError as e:
                 return JsonResponse({'error': 'Invalid JSON format'}, status=400)
