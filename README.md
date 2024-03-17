@@ -19,8 +19,10 @@ pip install djangorestframework
 wap in the backend folder
 hackathon is the frontend folder
 ## Languages
-backend: Python Django, Rest API
+backend: Python Django, Rest API 
+
 database: sqlite3
+
 frontend: HTML/CSS/JS
 ## The main page
 Go to login.html for the start page of the html
