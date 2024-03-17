@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (authenticatedUser) {
                 try {
                     // Redirect to a dashboard page or perform other actions for successful login
-                    window.location.href = "s.html";
+                    window.location.href = "Listings.html";
                 } catch (error) {
                     console.error("Error redirecting:", error);
                 }
