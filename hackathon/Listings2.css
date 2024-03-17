@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200..800&family=Lekton:ital,wght@0,400;0,700;1,400&display=swap');
 .container {
     display: flex;
 }
@@ -109,7 +110,7 @@ h1{
     background-color: #ffffff;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow */
     padding: 1% 1%;
-    background-color:#3d4fb8;
+    background-color:#76c676fc;
     position: fixed;
     z-index: 1;
     display: flexbox;
