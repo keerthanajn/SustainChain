@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 body{
     display:grid;
@@ -8,7 +7,7 @@ body{
 }
 .login-container{
     
-    background-color: #8ec697;
+    background-color: rgba(255, 255, 255, 0.527);
     justify-content: center;
     padding: 40px;
     padding: 28px;
@@ -51,7 +50,7 @@ button{
 }
 
 body {
-  background: #fffafa;
+   background-color: #7078a3;
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
@@ -70,18 +69,19 @@ body {
 }
 
 .b:before {
-  background: #a5e2d6;
+  background-color: #7078a3;
+ 
   z-index: -2;
 }
 
 .b:after {
-  background: #08a394;
+  background: #3d4fb8;
   z-index: -1;
   transform: translate3d(0, 150%, 0) scale(1.4);
 }
 
 .b:hover {
-  color: #58b7aa;
+  color: #3d4fb8;
 }
 
 .b:hover:after {
@@ -91,7 +91,7 @@ body {
 input[type="text"],
 input[type="password"]{
 
-border: 3px solid #6ead78;
+border: 3px solid #000000;
 width: 100%; /* Set the width to 100% to fill the container */
     height: 30px;
  transition: border-color 0.3s ease;
@@ -113,8 +113,8 @@ button[type="submit"] {
 width: 100%;
   padding: 1px;
   font-size: 15px;
-  background-color: #40af6b;
-  color: #fff;
+  background-color: #3d4fb8;
+  color: #050303;
   border: none;
   border-radius: 3px;
   cursor: pointer;
