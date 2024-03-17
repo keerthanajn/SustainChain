@@ -80,6 +80,10 @@ h1{
   transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
 }
 
+.links{
+  font-family: "Lekton", sans-serif;
+
+}
 
 .event-listing:hover {
   box-shadow: 0 8px 16px rgba(0.3, 0.3, 0.3, 0.3); /* Increase shadow on hover */
@@ -213,7 +217,7 @@ header {
 }
 
 .nav-links a:hover {
-  color: #007bff; /* Change to desired hover color */
+  color: green /* Change to desired hover color */
 }
 
 /* Style the user actions */
@@ -233,7 +237,7 @@ header {
 
 
 .user-actions a:hover {
-  color: #007bff; /* Change to desired hover color */
+  color: green /* Change to desired hover color */
 }
 
 .sidebar{
@@ -288,6 +292,7 @@ header {
 }
 .ar{
   padding-left: 5%;
+
   
 }
 
