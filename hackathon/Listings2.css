@@ -201,6 +201,19 @@ h1{
     font-size:25px; /* Remove default underline */
   }
 
+  .side-links a {
+    margin-right: 20px;
+    margin-left: 20px;
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .side-links a:hover {
+    color: green; /* Change to desired hover color */
+  }
+
   .signed-up{
     background-color: #7078a3;
   color:white;

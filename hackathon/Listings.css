@@ -271,7 +271,7 @@ header {
 }
 
 .side-links a:hover {
-  color: #4b4e5d89; /* Change to desired hover color */
+  color: green; /* Change to desired hover color */
 }
 
 /* .signed-up{
