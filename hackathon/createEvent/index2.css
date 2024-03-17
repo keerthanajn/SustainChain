@@ -98,31 +98,36 @@ form {
 }
 
 #educationBtn {
-    background-color: #cc0000; /* Red background color */
+    background-color: #ff0000; /* Red background color */
     color: #fff; /* White text color */
 }
 
 #educationBtn:hover {
-    background-color: #c74c4c; /* Darker red background color on hover */
+    filter: brightness(50%);
 }
 
 #communityBtn {
-    background-color: #ff7f00; /* Orange background color */
+    background-color: #ff8000; /* Orange background color */
     color: #fff; /* White text color */
 }
 
 #communityBtn:hover {
-    background-color: #cc6600; /* Darker orange background color on hover */
+    filter: brightness(50%);
 }
 
 #technologyBtn {
-    background-color: #007bff; /* Blue background color */
+    background-color: #0080ff; /* Blue background color */
     color: #fff; /* White text color */
 }
 
 #technologyBtn:hover {
-    background-color: #0056b3; /* Darker blue background color on hover */
+    filter: brightness(50%);
 }
+
+.category-section .button-with-icon button.selected {
+    filter: brightness(60%); /* Darken the button color when clicked or focused */
+}
+
 
 
 /* Input and textarea styling */

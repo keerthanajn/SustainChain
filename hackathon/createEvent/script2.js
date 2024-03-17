@@ -95,11 +95,20 @@ document.addEventListener("DOMContentLoaded", async function() {
             if (categoryOptions.includes(categoryOptionText)) {
                 categoryOption = categoryOptionText;
                 console.log("Selected category option:", categoryOption);
+
+                // Remove border from all buttons
+                document.querySelectorAll(".button-with-icon button").forEach(btn => {
+                    btn.classList.remove("selected");
+                });
+
+                // Add border to the clicked button
+                this.classList.add("selected");
             } else {
                 console.error("Invalid category option:", categoryOptionText);
             }
         });
     });
+
 
     // // Add event listeners to location buttons
     // document.querySelectorAll(".location-buttons button").forEach(button  => {
