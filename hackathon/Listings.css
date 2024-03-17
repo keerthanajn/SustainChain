@@ -1,14 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200..800&display=swap');
 .container {
   display: flex;
 }
 
 .sidebar {
   flex: 0 0 20%;
-  background-color: #7078a3;
-  padding-bottom:300px;
-  height: 115px;
-  /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7); */
+  background-color: #6fc49b;
+  padding-bottom:20%;
+  z-index: 0;
+  margin-top: 5%;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
   
+}
+
+#token-count{
+  display: flex;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
 }
 
 .user-profile {
@@ -16,6 +24,10 @@
   margin-bottom: 1rem;
 }
 
+.us{
+  font-size: small;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 .user-profile img {
   width: 50%;
   height: 50%;
@@ -26,9 +38,18 @@
   display: flex;
 }
 
+.ce{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h1{
+  font-family: "Gemunu Libre", sans-serif;
+}
 .ad-listings {
+  margin-top: 8%;
   flex: 1;
-  padding: 1rem;
+  padding: 1%;
 }
 
 .search-bar {
@@ -128,32 +149,45 @@
 header {
   background-color: #ffffff;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow */
-  padding: 15px 20px;
+  padding: 1% 1%;
   background-color:#3d4fb8;
+  position: fixed;
+  z-index: 1;
+  display: flexbox;
+  width: 100%;
+  justify-content: space-between;
+
 }
 
 /* Style the navbar */
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
   color:white;
+
+  
+  
   
 }
 
 /* Style the logo */
 .logo img {
-  height: 40px; /* Adjust the height as needed */
+  height: 40px;
+   /* Adjust the height as needed */
 }
 
 /* Style the navigation links */
 .nav-links {
   list-style-type: none;
   display: flex;
+  justify-content: start; 
 }
 
 .nav-links li {
-  margin-right: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+
   
 }
 
@@ -162,6 +196,8 @@ header {
 }
 
 .nav-links a {
+  margin-right: 20px;
+  margin-left: 20px;
   text-decoration: none;
   color:white;
   font-weight: bold;
@@ -176,14 +212,14 @@ header {
 .user-actions {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  padding-left: 45%;
   
 }
-
 .user-actions a {
   text-decoration: none;
   color:white;
   font-weight: bold;
-  margin-right: 20px; /* Add some spacing between "Sign In" and the logo */
   transition: color 0.3s ease;
 }
 
@@ -194,8 +230,9 @@ header {
 
 .sidebar{
   justify-content: center;
-  padding-left: 20px;
-  padding-top: 30px;
+  padding-left: 3%;
+  padding-top: 3%;
+  padding-right: 4%;
   height:fit-content;
   list-style-type: none;
   
@@ -212,18 +249,18 @@ header {
   font-size:25px; /* Remove default underline */
 }
 
-.side-links a:hover {
-  color: #3c3d4689; /* Change to desired hover color */
-}
-
 .signed-up{
-  background-color: #7078a3;
+  background-color: #6fc49b;
   color:white;
   width:280px;
   padding-left: 50px;
   height:fit-content;
   margin-top: 100px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.ar{
+  padding-left: 5%;
+  
 }
 
 body{
