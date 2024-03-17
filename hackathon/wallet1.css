@@ -59,6 +59,8 @@ body {
     height: 40px;
     transition: border-color 0.3s ease;
     border-radius: 50px;
+    padding-left: 10px;
+    margin-top: 10px;
   }
   
   input[type="text"]:focus {
@@ -93,8 +95,8 @@ pre {
 
 .container {
   position: fixed;
-  width: 1086px;
-  height: 579px;
+  width: 60%;
+  height: 60%;
   top: 50%; /* Position from the top at 50% */
   left: 50%; /* Position from the left at 50% */
   transform: translate(-50%, -50%); /* Move the container back by half its own width and height */
