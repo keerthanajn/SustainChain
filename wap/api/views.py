@@ -157,9 +157,11 @@ class whitelist(APIView):
             # Serialize project objects to JSON
         whiteList_json = []
         for whiteItem in whiteList:
+            project = Project.objects.filter(user=whiteItem.user)
             whiteItem_data = {
-                'user': whiteItem.username,
-                'walletAddress': whiteItem.walletAddress
+                'user': whiteItem.user.username,
+                'walletAddress': whiteItem.walletAddress,
+                'projectnum': project.count(),
                 
             }
             whiteList_json.append(whiteItem_data)
