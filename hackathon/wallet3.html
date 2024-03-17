@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Token Transfer</title>
+    <link rel="stylesheet" href="wallet3.css">
+</head>
+<body>
+    <div class="container">
+        <div class="transfer-form">
+            <h1>Transfering</h1>
+            <h1 id="token-count">Your Tokens:</h1>
+            <label for="to">Recipient:</label>
+            <input id="to" type="text" placeholder="Enter recipient's wallet address">
+            <br><br>
+            <label for="Data">Sender:</label>
+            <input id="Data" type="text" placeholder="Enter sender's wallet address">
+            <br><br>
+            <label for="amount">Amount:</label>
+            <input id="amount" type="text" placeholder="Enter transfer amount">
+            <br><br>
+            <button onclick="sendTransaction()">Transfer</button>
+            <br><br>
+            <pre id="result"></pre>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/@vechain/connex@2"></script>
+    <script src="wallet3.js"></script>
+</body>
+</html>
