@@ -48,27 +48,28 @@ form {
 }
 
 .datetime-section .section-heading {
-    margin-bottom: 20px; /* Add space between heading and inputs/buttons */
+    margin-bottom: 5px; /* Add space between heading and inputs/buttons */
 }
 
 .description-section .section-heading {
-    margin-bottom: 20px; /* Add space between heading and textarea */
-}
-
-.location-section .section-heading {
-    margin-bottom: 20px; /* Add space between heading and buttons */
+    margin-top:5px;
+    margin-bottom: 5px; /* Add space between heading and textarea */
 }
 
 .category-section .section-heading {
     margin-bottom: 20px; /* Add space between heading and buttons */
 }
 
-.image-section .section-heading {
-    margin-bottom: 20px; /* Add space between heading and button */
+.wallet-section {
+    margin-top: 0px;
 }
 
-.category-section .section-heading {
-    margin-bottom: 20px; /* Add space between heading and buttons */
+.wallet-section .section-heading{
+    margin-bottom: 5px;
+}
+
+.wallet-section #walletAddressInput{
+    margin-top: 0px;
 }
 
 .category-buttons {
@@ -339,12 +340,12 @@ footer {
     color: #333; /* Dark text color */
     padding: 20px;
     text-align: center;
-    position: relative; /* Relative positioning */
+    position: fixed; /* Fixed positioning */
+    bottom: 0; /* Position at the bottom of the viewport */
     width: 100%;
     z-index: 999; /* Ensure footer stays above other content */
     display: flex; /* Use flexbox */
     justify-content: flex-end; /* Align items to the end (right) */
-    
 }
 
 /* Styling for buttons inside footer */
@@ -361,7 +362,6 @@ footer button {
 footer button#exitButton {
     color: #007bff; /* Blue font color */
     background-color: white; 
-
 }
 
 /* Hover effect for "Exit" button */
@@ -379,6 +379,3 @@ footer button#createEventButton {
 footer button#createEventButton:hover {
     background-color: #218838; /* Darker green background on hover */
 }
-
-
-
