@@ -1,8 +1,7 @@
 document.addEventListener("DOMContentLoaded", async function() {
     // Global variables to store selected options
     let categoryOption = null;
-    // let locationOption = null;
-    // let categoryOption = null;
+    let wallet_address = null;
 
     // Load options data from optionsData.json
     const optionsResponse = await fetch('optionsData.json');
@@ -10,12 +9,27 @@ document.addEventListener("DOMContentLoaded", async function() {
 
     // Extract options from optionsData
     const categoryOptions = optionsData.categoryOptions;
-    // const locationOptions = optionsData.locationOptions;
-    // const categoryOptions = optionsData.categoryOptions;
 
     // Add event listeners to buttons
     document.getElementById("exitButton").addEventListener("click", exitPage);
     document.getElementById("createEventButton").addEventListener("click", createEvent);
+
+    // Add event listener to checkbox
+    document.getElementById("addWalletCheckbox").addEventListener("change", function() {
+        const checkbox = document.getElementById("addWalletCheckbox");
+        const walletInput = document.getElementById("walletAddressInput");
+
+        if (checkbox.checked) {
+            // If checkbox is checked, enable wallet input and save its value
+            walletInput.disabled = false;
+            wallet_address = walletInput.value;
+        } else {
+            // If checkbox is unchecked, disable wallet input and set wallet address to null
+            walletInput.disabled = true;
+            walletInput.value = ""; // Clear input value
+            wallet_address = null;
+        }
+    });
 
     // Function for Exit button
     function exitPage() {
@@ -29,25 +43,18 @@ document.addEventListener("DOMContentLoaded", async function() {
     // Function for Create Event button
     function createEvent() {
         const user = "Aryaa"
-        // const projectID = 1;
         const projectName = document.getElementById('eventName').value;
-        // const eventDate = document.getElementById('eventDate').value;
         const eventDescription = document.getElementById('eventDescription').value;
         const postcode = document.getElementById('postcode').value;
-        
 
         if (projectName && eventDescription && postcode) {
             const eventData = {
                 user: user,
-                // projectID: projectID,
                 projectName: projectName,
                 eventDescription: eventDescription,
                 categoryOption: categoryOption,
-                postcode: postcode
-                
-                // locationOption: locationOption,
-                // categoryOption: categoryOption,
-                
+                postcode: postcode,
+                wallet_address: wallet_address
             };
 
             console.log("Event Data:", eventData);
@@ -66,8 +73,6 @@ document.addEventListener("DOMContentLoaded", async function() {
                     console.log("Event created successfully!");
                     // Reset options
                     categoryOption = null;
-                    // locationOption = null;
-                    // categoryOption = null;
                 } else {
                     throw new Error('Failed to create event.');
                 }
@@ -75,10 +80,6 @@ document.addEventListener("DOMContentLoaded", async function() {
             .catch(error => {
                 console.error("Error creating event:", error);
             });
-
-            categoryOption = null;
-            // locationOption = null;
-            // categoryOption = null;
         } else {
             alert("Please fill in all fields before creating an event.");
         }
@@ -108,6 +109,9 @@ document.addEventListener("DOMContentLoaded", async function() {
             }
         });
     });
+    
+
+
 
 
     // // Add event listeners to location buttons

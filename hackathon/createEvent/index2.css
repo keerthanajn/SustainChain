@@ -128,6 +128,42 @@ form {
     filter: brightness(60%); /* Darken the button color when clicked or focused */
 }
 
+.wallet-section {
+    margin-top: 20px;
+}
+
+.wallet-inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.wallet-inputs .description {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.checkbox-and-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.checkbox-and-input input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.checkbox-and-input label {
+    font-size: 14px;
+    color: #333;
+}
+
+.wallet-inputs input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+}
 
 
 /* Input and textarea styling */
@@ -260,6 +296,40 @@ textarea {
 #size500plus:hover {
     background-color: #654321; /* Darker brown background color on hover */
 }
+
+.wallet-section {
+    margin-top: 20px;
+}
+
+.wallet-inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.wallet-inputs .checkbox-label {
+    position: relative;
+    padding-left: 25px; /* Adjust as needed to align the checkbox */
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+}
+
+.wallet-inputs .checkbox-label input[type="checkbox"] {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.wallet-inputs input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+    margin-top: 10px;
+}
+
+
 
 
 /* Styling for footer */
