@@ -4,8 +4,10 @@
 
 .sidebar {
     flex: 0 0 20%;
-    background-color: #f0f0f0;
-    padding: 1rem;
+    background-color: #7078a3;
+    padding-bottom:300px;
+    /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7); */
+    
 }
 
 .user-profile {
@@ -43,7 +45,8 @@
     display: flex;
     flex-direction: column; /* Stack elements vertically */
     margin-bottom: 1rem;
-    background-color: #fff;
+    background-color: 7078a3;
+    margin-top:20px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
 }
@@ -81,8 +84,9 @@
   /* Style the header */
   header {
     background-color: #ffffff;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow */
     padding: 15px 20px;
+    background-color:#3d4fb8;
   }
   
   /* Style the navbar */
@@ -90,6 +94,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color:white;
+    
   }
   
   /* Style the logo */
@@ -105,6 +111,7 @@
   
   .nav-links li {
     margin-right: 20px;
+    
   }
   
   .nav-links li:last-child {
@@ -113,7 +120,7 @@
   
   .nav-links a {
     text-decoration: none;
-    color: #333333;
+    color:white;
     font-weight: bold;
     transition: color 0.3s ease;
   }
@@ -126,17 +133,49 @@
   .user-actions {
     display: flex;
     align-items: center;
+    
   }
   
   .user-actions a {
     text-decoration: none;
-    color: #333333;
+    color:white;
     font-weight: bold;
     margin-right: 20px; /* Add some spacing between "Sign In" and the logo */
     transition: color 0.3s ease;
   }
+
   
   .user-actions a:hover {
     color: #007bff; /* Change to desired hover color */
+  }
+  
+  .sidebar{
+    justify-content: center;
+    padding-left: 20px;
+    padding-top: 30px;
+    height:fit-content;
+    list-style-type: none;
+    
+  }
+
+  .sidebar li {
+    margin-bottom: 10px; /* Add margin between list items */
+    list-style-type: none;
+  }
+  
+  .sidebar a {
+    color: white; /* Set font color to white */
+    text-decoration: none;
+    font-size:25px; /* Remove default underline */
+  }
+
+  .signed-up{
+    background-color: #7078a3;
+    color:white;
+    width:280px;
+    padding-left: 50px;
+    height:fit-content;
+    margin-top: 100px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
   }
   

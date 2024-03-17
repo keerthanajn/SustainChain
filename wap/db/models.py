@@ -42,3 +42,5 @@ class Whitelist(models.Model):
     total_attendees = models.IntegerField(default=0)
 
 
+    
+
