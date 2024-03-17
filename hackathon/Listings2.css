@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200..800&family=Lekton:ital,wght@0,400;0,700;1,400&display=swap');
 .container {
-    display: flex;
+  display: flex;
 }
 
 .sidebar {
@@ -21,8 +21,8 @@
 }
 
 .user-profile {
-    text-align: center;
-    margin-bottom: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 .us{
@@ -35,11 +35,11 @@
 }
 
 .content {
-    flex: 1;
-    display: flex;
+  flex: 1;
+  display: flex;
 }
 
-.he{
+.ce{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,7 +54,7 @@ h1{
 }
 
 .search-bar {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .search-bar input {
@@ -65,31 +65,83 @@ h1{
   margin-right: 0%;
   margin-left: 0%;
 }
-
 .event-listing {
-    display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    margin-bottom: 1rem;
-    background-color: #fff;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+  margin: 5%;
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Align items horizontally to the center */
+  margin-bottom: 1rem;
+  background-color: #faf9f6af; /* Light gray background */
+  padding: 5%; /* Add padding for better spacing */
+  border-radius: 10px; /* Rounded corners */
+  font-family:"Lekton", sans-serif;
+  /* border: 2px solid #3d4fb8; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
 }
 
+.links{
+  font-family: "Lekton", sans-serif;
+
+}
+
+.event-listing:hover {
+  box-shadow: 0 8px 16px rgba(0.3, 0.3, 0.3, 0.3); /* Increase shadow on hover */
+}
+
+
+
 .event-listing img {
-    width: 150px; /* Adjust image width as needed */
-    /* Removed margin-right as image is on top now */
+  width: 50%; /* Adjust image width as needed */
+  border-radius: 10px;
+  /* Removed margin-right as image is on top now */
 }
 
 .event-details {
-    flex: 1; /* Make details area take up remaining space */
-    padding: 1rem;
+  flex: 1; /* Make details area take up remaining space */
+  padding: 1rem;
 }
 
 .read-more {
-    display: block; /* Make "Read More" a block-level element */
-    text-align: center; /* Align right within event details */
-    
+  display: block; /* Make "Read More" a block-level element */
+  text-align: center; /* Align right within event details */
+  
 }
+
+
+
+
+
+.event-details {
+  padding: 1rem; /* Adjust padding as needed */
+}
+
+.event-details h3 {
+  font-size: 1.2rem; /* Adjust font size for event titles */
+  margin-bottom: 0.5rem; /* Add margin bottom for spacing */
+  color: #000000; /* Set color for event titles */
+}
+
+.event-details p {
+  font-family:"Lekton", sans-serif;
+  font-size: 15px; /* Adjust font size for event descriptions */
+  color: #000000; /* Set color for event descriptions */
+  margin-bottom: 0.5rem; /* Add margin bottom for spacing */
+}
+
+.event-details a.read-more {
+  text-decoration: none; /* Remove default underline */
+  color: #111112; /* Set color for read more link */
+  font-weight: bold; /* Add bold font weight */
+  transition: color 0.3s ease; /* Add transition effect */
+}
+
+.event-details a.read-more:hover {
+  color: #a3a9b0; /* Change color on hover */
+}
+
+
+
 
 
 
@@ -100,132 +152,180 @@ h1{
 
 /* Reset default margin and padding */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Style the header */
-  header {
-    background-color: #ffffff;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow */
-    padding: 1% 1%;
-    background-color:#76c676fc;
-    position: fixed;
-    z-index: 1;
-    display: flexbox;
-    width: 100%;
-    justify-content: space-between;
-  }
-  
-  /* Style the navbar */
-  .navbar {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    color:white;
-  }
-  
-  /* Style the logo */
-  .logo img {
-    height: 40px; /* Adjust the height as needed */
-  }
-  
-  /* Style the navigation links */
-  .nav-links {
-    list-style-type: none;
-    display: flex;
-    justify-content: start; 
-  }
-  
-  .nav-links li {
-    margin-right: 10px;
-    margin-left: 10px;
-  }
-  
-  .nav-links li:last-child {
-    margin-right: 0;
-  }
-  
-  .nav-links a {
-    margin-right: 20px;
-    margin-left: 20px;
-    text-decoration: none;
-    color:white;
-    font-weight: bold;
-    transition: color 0.3s ease;
-  }
-  
-  .nav-links a:hover {
-    color: #007bff; /* Change to desired hover color */
-  }
-  
-  /* Style the user actions */
-  .user-actions {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding-left: 45%;
-  }
-  
-  .user-actions a {
-    text-decoration: none;
-    color:white;
-    font-weight: bold;
-    transition: color 0.3s ease;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  
-  .user-actions a:hover {
-    color: #007bff; /* Change to desired hover color */
-  }
+/* Style the header */
+header {
+  background-color: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow */
+  padding: 1% 1%;
+  background-color:#76c676fc;
+  position: fixed;
+  z-index: 1;
+  display: flexbox;
+  width: 100%;
+  justify-content: space-between;
 
-  .sidebar{
-    justify-content: center;
-    padding-left: 3%;
-    padding-top: 3%;
-    padding-right: 4%;
-    height:fit-content;
-    list-style-type: none;
-    
-  }
-  
-  .sidebar li {
-    margin-bottom: 10px; /* Add margin between list items */
-    list-style-type: none;
-  }
-  
-  .sidebar a {
-    color: white; /* Set font color to white */
-    text-decoration: none;
-    font-size:25px; /* Remove default underline */
-  }
+}
 
-  .side-links a {
-    margin-right: 20px;
-    margin-left: 20px;
-    text-decoration: none;
-    color:white;
-    font-weight: bold;
-    transition: color 0.3s ease;
-  }
-  
-  .side-links a:hover {
-    color: green; /* Change to desired hover color */
-  }
+/* Style the navbar */
+.navbar {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  color:white;
+}
 
-  .signed-up{
-    background-color: #7078a3;
+/* Style the logo */
+.logo img {
+  height: 40px;
+   /* Adjust the height as needed */
+}
+
+/* Style the navigation links */
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  justify-content: start; 
+}
+
+.nav-links li {
+  margin-right: 10px;
+  margin-left: 10px;  
+}
+
+.nav-links li:last-child {
+  margin-right: 0;
+}
+
+.nav-links a {
+  margin-right: 20px;
+  margin-left: 20px;
+  text-decoration: none;
+  color:white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: green /* Change to desired hover color */
+}
+
+/* Style the user actions */
+.user-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-left: 45%;
+  
+}
+.user-actions a {
+  text-decoration: none;
+  color:white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+
+.user-actions a:hover {
+  color: green /* Change to desired hover color */
+}
+
+.sidebar{
+  justify-content: center;
+  padding-left: 3%;
+  padding-top: 3%;
+  padding-right: 4%;
+  height:fit-content;
+  list-style-type: none;
+  
+}
+
+.sidebar li {
+  margin-bottom: 10px; /* Add margin between list items */
+  list-style-type: none;
+}
+
+.sidebar a {
+  color: white; /* Set font color to white */
+  text-decoration: none;
+  font-size:25px; /* Remove default underline */
+}
+
+.side-links a {
+  margin-right: 20px;
+  margin-left: 20px;
+  text-decoration: none;
+  color:white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.side-links a:hover {
+  color: green; /* Change to desired hover color */
+}
+
+/* .signed-up{
+  background-color: #6fc49b;
   color:white;
   width:280px;
   padding-left: 50px;
   height:fit-content;
   margin-top: 100px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
+} */
+.signed-up{
+  width: 27%;
+  background-color: #6fc49b;
+  z-index: 0;
+  margin-top: 7%;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.ar{
+  padding-left: 5%;
+
   
+}
+
+body{
+  background-color: #d6f7e7;
+}
+.h{
+  padding: 2%;
+}
+.lis{
+  padding: 2%;
+  margin: 0%;
+  list-style:none;
+}
+h2{
+  font-size: 30px;
+  font-family: "Gemunu Libre", sans-serif;
+  color: white;
+}
+#hs{
+  font-size: 20px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: white;
+  margin-left: 7%;
+}
+
+#hsc{
+  font-size: 20px;
+  font-family: "Gemunu Libre", sans-serif;
+  color: white;
+  margin-left: 7%;
+}
+
+
+
+
+  .signed-up li{
+    font-size: 20px;
+    font-family: "Gemunu Libre", sans-serif;
+    color: white;
+    margin-left: 7%;
   }
-  .signed-up ul{
-    list-style-type: none;
-  }
-  
-  

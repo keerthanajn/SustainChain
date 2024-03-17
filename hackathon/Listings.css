@@ -177,10 +177,6 @@ header {
   justify-content: start;
   align-items: center;
   color:white;
-
-  
-  
-  
 }
 
 /* Style the logo */
@@ -198,9 +194,7 @@ header {
 
 .nav-links li {
   margin-right: 10px;
-  margin-left: 10px;
-
-  
+  margin-left: 10px;  
 }
 
 .nav-links li:last-child {
