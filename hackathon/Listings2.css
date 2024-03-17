@@ -47,8 +47,9 @@ h1{
   font-family: "Gemunu Libre", sans-serif;
 }
 .ad-listings {
-    flex: 1;
-    padding: 1rem;
+  margin-top: 8%;
+  flex: 1;
+  padding: 1%;
 }
 
 .search-bar {
@@ -56,9 +57,12 @@ h1{
 }
 
 .search-bar input {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ddd;
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  margin: 5%;
+  margin-right: 0%;
+  margin-left: 0%;
 }
 
 .event-listing {
@@ -103,15 +107,20 @@ h1{
   /* Style the header */
   header {
     background-color: #ffffff;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow */
-  padding: 15px 20px;
-  background-color:#3d4fb8;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow */
+    padding: 1% 1%;
+    background-color:#3d4fb8;
+    position: fixed;
+    z-index: 1;
+    display: flexbox;
+    width: 100%;
+    justify-content: space-between;
   }
   
   /* Style the navbar */
   .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
     color:white;
   }
@@ -125,11 +134,12 @@ h1{
   .nav-links {
     list-style-type: none;
     display: flex;
-    color:white;
+    justify-content: start; 
   }
   
   .nav-links li {
-    margin-right: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
   }
   
   .nav-links li:last-child {
@@ -137,8 +147,10 @@ h1{
   }
   
   .nav-links a {
+    margin-right: 20px;
+    margin-left: 20px;
     text-decoration: none;
-    color: #f5f5f5;
+    color:white;
     font-weight: bold;
     transition: color 0.3s ease;
   }
@@ -151,13 +163,14 @@ h1{
   .user-actions {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+    padding-left: 45%;
   }
   
   .user-actions a {
     text-decoration: none;
-    color: #f7f2f2;
+    color:white;
     font-weight: bold;
-    margin-right: 20px; /* Add some spacing between "Sign In" and the logo */
     transition: color 0.3s ease;
   }
 
@@ -168,12 +181,11 @@ h1{
 
   .sidebar{
     justify-content: center;
-    padding-left: 20px;
-    padding-top: 30px;
-    padding-bottom: 12%;
+    padding-left: 3%;
+    padding-top: 3%;
+    padding-right: 4%;
     height:fit-content;
     list-style-type: none;
-    background-color: #7078a3;
     
   }
   
