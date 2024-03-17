@@ -65,6 +65,25 @@ h1{
   margin-right: 0%;
   margin-left: 0%;
 }
+.code-input {
+  flex: 1; /* Take up remaining space */
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+}
+
+.submit-btn {
+  margin-left: 1rem; /* Add space between input and button */
+  padding: 0.5rem 1rem; /* Adjust padding as needed */
+  border: 1px solid #ddd;
+  background-color: #f0f0f0; /* Add background color */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.read-more {
+  display: block; /* Ensure it's displayed as a block element */
+  margin-top: 0.5rem; /* Adjust margin-top to create space below the submit area */
+}
+
 .event-listing {
   margin: 5%;
   display: flex;
@@ -320,12 +339,9 @@ h2{
   margin-left: 7%;
 }
 
-
-
-
   .signed-up li{
     font-size: 20px;
     font-family: "Gemunu Libre", sans-serif;
     color: white;
-    margin-left: 7%;
+    margin-left: 15%;
   }
