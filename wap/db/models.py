@@ -30,9 +30,15 @@ class Project(models.Model):
     created = models.DateField(auto_now_add=True) 
 
 class SignedupList(models.Model):
-    projectID = models.ForeignKey(Projects, on_delete=models.CASCADE)
-    username = models.ForeignKey(Login, on_delete=models.CASCADE, unique=True)
+    projectID = models.ForeignKey(Project, on_delete=models.CASCADE)
+    username = models.ForeignKey(Login, on_delete=models.CASCADE)
 class tokens(models.Model):
     user = models.ForeignKey(Login, on_delete=models.CASCADE)
     tokens = models.BigIntegerField(max_length=100000)
+class Whitelist(models.Model):
+    user = models.ForeignKey(Login, on_delete=models.CASCADE, unique=True)
+    wallet_address = models.Field(max_length=200, blank=True)
+    total_projects = models.IntegerField(default=0)
+    total_attendees = models.IntegerField(default=0)
+
 

@@ -96,26 +96,49 @@ class getallprojects(APIView):
             projects_json.append(project_data)
         return JsonResponse(projects_json, safe=False)
 class getallsignedup(APIView):
+    def getUsernames(spd):
+        s = []
+        for i in spd:
+            a = i.username.username
+            s.append(a)
+        return s
+
+            
+
 
 
     def signedup(request):
-        signedUp = SignedupList.objects.all()
+        
+        signedUp = SignedupList.objects.values('projectID').distinct()
+        
             # Serialize project objects to JSON
         Signed_json = []
         sd = []
+        pd = []
+        # for i in si:
+        #     s = i.projectID.projectName
+        #     sd.append(s)
+        # sd = list(set(sd))
+        print(sd)
         for signed in signedUp:
-            s = signed.username.username
-            sd.append(s)
+            
+            signedp = Project.objects.filter(projectID=signed['projectID'])
+            spd = SignedupList.objects.filter(projectID = signed['projectID'])  
+            spd = getallsignedup.getUsernames(spd)       
+            # s = signed.username
+            # p = signed.projectID.objects.values('projectID').distinct()
+            # print(p)
+            # sd.append(s)
+            # pd.append(p)
             signed_data = { 
-                'projectID': signed.projectID.projectID,
-                'projectName':signed.projectID.projectName,
-                'username': sd,
-                'number': len(sd),
-                # 'number': len(signed.username)
+                    'projectID': signed['projectID'],
+                    'projectName':signedp[0].projectName,
+                    'username': spd,
+                    'number': len(spd),
+                        # 'number': len(signed.username)
             }
-            print(sd)
             Signed_json.append(signed_data)
-        return JsonResponse(signed_data, safe=False)
+        return JsonResponse(Signed_json, safe=False)
 
 class getalltokens(APIView):
     def tokens(request):
@@ -123,7 +146,6 @@ class getalltokens(APIView):
         token_json = []
         
         for i in token:
-            print(i.user.username)
             token_data = { 
                 'user': i.user.username,
                 'tokens': i.tokens,
@@ -132,7 +154,40 @@ class getalltokens(APIView):
         return JsonResponse(token_json, safe=False)
 
 
+class whitelist(APIView):
+    def update_whitelist(request):
+        user = Login.objects.all()
+        signedup = SignedupList.objects.all()
+        num_json = []
+        
+        nd = []
+        sd = []
+        ud = []
+        for u in user:
+            projects = Project.objects.filter(user=u)
+            project_count = projects.count()
+            print(project_count)
+            ud.append(u.username)
+            nd.append(project_count)
 
+
+        for p in projects:
+            signed_count = SignedupList.objects.filter(projectID=p).count()
+            sd.append(signed_count)
+        
+        for i in range(len(ud)):
+            num_data={
+                'user': ud[i],
+                'numprojects': nd[i],
+                'numofsignups': sd[i],
+            }
+            num_json.append(num_data)
+        return JsonResponse(num_json, safe=False)
+
+
+    # Get the user's projects
+        
+        
     
 
 

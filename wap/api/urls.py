@@ -7,6 +7,7 @@ urlpatterns = [
     path('getprojects/', views.getallprojects.projects),
     path('getsignedup/', views.getallsignedup.signedup),
     path('gettokens/', views.getalltokens.tokens),
+    path('getwhitelist/', views.whitelist.update_whitelist),
     path('createevent/', views.postallpostcomments.create_event_view),
     path('', views.home),
 ]
