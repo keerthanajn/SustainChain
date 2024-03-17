@@ -17,7 +17,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh; /* Full height of the viewport */
-  background-image: url('back3.jpeg'); /* Add your image path here */
+  background-image: url('bgt.jpg'); /* Add your image path here */
     background-size: cover; /* Cover the entire container */
     background-position: center; /* Center the background image */
 }
@@ -39,9 +39,12 @@ body {
   }
   
   .transfer-form {
-    background-color: rgba(214, 247, 231, 0.8); /* Adjust the opacity and color of the background */
+    background-color: rgba(214, 247, 231, 0); /* Adjust the opacity and color of the background */
     border-radius: 15px;
-    padding: 20px; /* Add padding to the form */
+    margin: 4%; /* Add padding to the form */
+    align-items: center;
+    justify-content: center;
+    display: flexbox;
   }
   
   .transfer-form h2 {
@@ -54,7 +57,7 @@ body {
   }
   
   input[type="text"] {
-    border: 3px solid #6ead78;
+    border: 3px solid #6ead78c7;
     width: calc(100% - 30px);
     height: 40px;
     transition: border-color 0.3s ease;
@@ -94,12 +97,14 @@ pre {
 
 
 .container {
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
   position: fixed;
-  width: 60%;
-  height: 60%;
-  top: 50%; /* Position from the top at 50% */
-  left: 50%; /* Position from the left at 50% */
+  width: 63%;
+  height: 63%; /* Position from the left at 50% */
   transform: translate(-50%, -50%); /* Move the container back by half its own width and height */
   background-color: #d6f7e7;
   border-radius: 15px;
+  padding: 0%;
 }
