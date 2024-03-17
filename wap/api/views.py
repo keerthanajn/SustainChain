@@ -155,9 +155,9 @@ class whitelist(APIView):
     def update_whitelist(request):
         whiteList = Whitelist.objects.all()
             # Serialize project objects to JSON
-         whiteList_json = []
+        whiteList_json = []
         for whiteItem in whiteList:
-            whiteItem _data = {
+            whiteItem_data = {
                 'user': whiteItem.username,
                 'walletAddress': whiteItem.walletAddress
                 
