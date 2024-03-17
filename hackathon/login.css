@@ -1,43 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 body{
-    display:grid;
-    grid-template-columns: 200px 150px 150px 250px 200px 200px;
-    grid-template-rows: 200px 300px ;
+    display:flexbox;
+    /* grid-template-columns: 200px 150px 150px 250px 200px 200px;
+    grid-template-rows: 200px 300px ; */
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
 }
 .login-container{
     
-    background-color: rgba(255, 255, 255, 0.527);
+    background-color: rgba(255, 255, 255, 0.76);
     justify-content: center;
-    padding: 40px;
-    padding: 28px;
-
+    padding: 5%;
     border-radius: 30px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    width: 25%;
+    height: 25%;
+    
     
 }
 .outer-container{
-    grid-column: 4;
-    grid-row: 2;
-    margin:5px;
+  display: flex;
+  justify-content: center;
+    align-items: center;
+    padding-top:10%;
     
 }
 .u{
    
     text-align: center;
-    margin-top: 5px;
-    color:#fff
+    
+    margin: 7%;
+    margin-top: 0%;
+    color:rgba(224, 25, 59, 0.589);
 }
 button{
     text-align: center;
     padding-top:25px;
     border-radius: 20px;
     padding-left: 0px;
+    padding-top: 5%;
+    margin: 2%;
 
 }
 .b{
-    padding-top: 15px;
+    padding: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center
 }
 /* Define Open Sans font */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
@@ -50,43 +60,14 @@ button{
 }
 
 body {
-   background-color: #7078a3;
+  background-color: rgb(47, 176, 45);
+  background-repeat: no-repeat;
+  background-image: url('bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
-/* Button styles */
-
-.b:before,
-.b:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 30px;
-  transition: all 0.3s;
-}
-
-.b:before {
-  background-color: #7078a3;
- 
-  z-index: -2;
-}
-
-.b:after {
-  background: #3d4fb8;
-  z-index: -1;
-  transform: translate3d(0, 150%, 0) scale(1.4);
-}
-
-.b:hover {
-  color: #3d4fb8;
-}
-
-.b:hover:after {
-  transform: translate3d(0, 0, 0) scale(1);
-}
 
 input[type="text"],
 input[type="password"]{
@@ -98,31 +79,35 @@ width: 100%; /* Set the width to 100% to fill the container */
  border-radius: 50px;
 }
 .i{
-    padding-left: 10px;
+  margin: 5%;
+
 }
 
-input[type="text"]:focus:hover,
-input[type="password"]:focus:hover {
+input[type="text"]:hover,
+input[type="password"]:hover {
   outline: none;
-  border-color: #0fd0c3;
+  border-color: rgb(67, 207, 67);
   box-shadow: 0 0 5px rgba(137, 216, 162, 0.5);
   cursor: pointer;
 }
 
 button[type="submit"] {
-width: 100%;
-  padding: 1px;
-  font-size: 15px;
+  width: 50%;
+  height: 50%;
+  padding: 5px;
+  font-size: 18px;
   background-color: #3d4fb8;
-  color: #050303;
+  color: #ffffff;
   border: none;
-  border-radius: 3px;
+  border-radius: 5px;
   cursor: pointer;
+  align-items: center;
+  align-self: center;
   transition: background-color 0.3s ease;
 }
 
 button[type="submit"]:hover {
-  background-color: #a9e2c7;
+  background-color: #a16cba;
 }
 
 * {
@@ -136,7 +121,7 @@ button[type="submit"]:hover {
 
 h1{
     font-family:'Open Sans', Helvetica, Arial, sans-serif;
-    color:white;
+    color: rgba(224, 25, 59, 0.589);
     grid-column: 4;
     grid-row: 1;
    text-align:center;
