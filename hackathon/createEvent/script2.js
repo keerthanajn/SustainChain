@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         alert("Exiting the page...");
         var confirmExit = confirm("Are you sure you want to exit?");
         if (confirmExit) {
-            window.location.href = 'exit.html';
+            window.history.go(-1); // Go back to previous page
         }
     }
 
