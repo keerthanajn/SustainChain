@@ -29,9 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
                   <img src="sustainable.jpeg" alt="Event Image">
                   <div class="event-details">
                       <h3>${project.projectName}</h3>
-                      <p>${project.description}</p>
+                      <p class="pd">${project.description}</p>
 
-                      <p>${project.created}</p>
+                      <p class="pc">${project.created}</p>
                       <a href="#" class="read-more">Read More</a>
                   </div>
               `;
