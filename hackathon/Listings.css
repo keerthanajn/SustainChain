@@ -249,6 +249,10 @@ header {
   font-size:25px; /* Remove default underline */
 }
 
+.side-links a:hover {
+  color: #4b4e5d89; /* Change to desired hover color */
+}
+
 .signed-up{
   background-color: #6fc49b;
   color:white;
