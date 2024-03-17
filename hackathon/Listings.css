@@ -54,17 +54,18 @@ h1{
 }
 
 .search-bar {
-  margin-bottom: 1rem;
+  margin-top: 0.5rem; /* Add some space at the top */
+  margin-bottom: 0.5rem;
 }
 
 .search-bar input {
-  width: 100%;
-  padding: 0.5rem;
+  width: calc(100% - 10%); /* Adjusted width to accommodate margin */
+  padding: 0.3rem; /* Decrease padding */
   border: 1px solid #ddd;
-  margin: 5%;
-  margin-right: 0%;
-  margin-left: 0%;
+  margin-left: 5%; /* Margin from the left side */
+  margin-right: 5%; /* Margin from the right side */
 }
+
 .event-listing {
   margin: 5%;
   display: flex;
