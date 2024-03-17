@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Iceberg&family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans&display=swap');
+
 body{
     display:flexbox;
     /* grid-template-columns: 200px 150px 150px 250px 200px 200px;
@@ -23,13 +25,12 @@ body{
   display: flex;
   justify-content: center;
     align-items: center;
-    padding-top:10%;
+    padding-top:3%;
     
 }
 .u{
    
     text-align: center;
-    
     margin: 7%;
     margin-top: 0%;
     color:rgba(224, 25, 59, 0.589);
@@ -120,16 +121,13 @@ button[type="submit"]:hover {
   }
 
 h1{
-    font-family:'Open Sans', Helvetica, Arial, sans-serif;
+    font-family:'Krub',sans-serif;
     color: rgba(224, 25, 59, 0.589);
     grid-column: 4;
     grid-row: 1;
    text-align:center;
 }
-img{
-    width:40px;
-    height:40px;
-}
+
 
 button.google-button{
     padding:0px;
@@ -138,11 +136,17 @@ button.google-button{
 }
 
 img{
-    grid-column:1;
-    grid-row: 2;
-    width: 250px;
-    height: 300px;
+    width: 7%;
+    height: 7%;
     border-radius: 30px;
+}
+.imgc{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3%;
+  margin: 0%;
+
 }
 .two{
     grid-column:6;
