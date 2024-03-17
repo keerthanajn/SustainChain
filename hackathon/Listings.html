@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Event Listings</title>
-  <link rel="stylesheet" href="Listings2.css">
+  <link rel="stylesheet" href="Listings.css">
 </head>
 <body>
   <header>
@@ -13,10 +13,10 @@
         <img src="Sustainchain.png" alt="Logo">
         </div>
       <ul class="nav-links">
-        <li><a href="Listings.html">Home</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Events</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a class="links" href="#">Home</a></li>
+        <li><a class="links" href="#">About Us</a></li>
+        <li><a class="links" href="#">Events</a></li>
+        <li><a class="links" href="#">Contact</a></li>
       </ul>
       <div class="user-actions">
         <p id="token-count">Loading</p>
@@ -33,51 +33,55 @@
       <ul class="side-links">
         <li><a class="us" href="wallet1.html">Claim Token</a></li>
         <li><a class="us"href="createEvent/index2.html">Create Event</a></li>
-        <li><a class="us"href="Listings.html">More events</a></li>
+        <li><a class="us"href="Listings2.html">My events</a></li>
         <li><a class="us"href="login.html">Log Out</a></li>
       </ul>
     </div>
 
     <div class="content">
       <div class="ad-listings">
-        <div class="he"><h1>Your hosted Events</h1></div>
+        <div class="ce"><h1>Current Events</h1></div>
         <div class="search-bar">
           <input type="text" id="search-input" placeholder="Search Events">
         </div>
         <ul>
-          
+          <!-- <li class="event-listing">
+            <img src="sustainable.jpeg" alt="Event Image">
+            <div class="event-details">
+              <h3>Event Title</h3>
+              <p>Event Description</p>
+              <p>Date and Time</p>
+              <a href="#" class="read-more">Read More</a>
+            </div>
+          </li>
+          <li class="event-listing">
+            <img src="sustainable.jpeg" alt="Event Image">
+            <div class="event-details">
+              <h3>Another Event Title</h3>
+              <p>Description of another event</p>
+              <p>Date and Time</p>
+              <a href="#" class="read-more">Read More</a>
+            </div> -->
           </li>
         </ul>
       </div>
 
       <div class="signed-up">
-        <div class="h"><h2>People</h2></div>
-        <!-- <h3 id="hs">Total Participants: 15</h3> -->
-        <ul>
-          <h3>Total Participants  = 2</h3>
-          <!-- <li> AnkitD1</li>
-          <li> HariD2</li>
-          <li> KJD3</li>
-          <li> AryaaD1</li>
-          <li> DaveD1</li>
-          <li> HarshD1</li>
-          <li> DweepD1</li>
-          <li> HarmanD1</li>
-          <li> HiyaD1</li>
-          <li> VisheshD1</li>
-          <li> AaravD1</li>
-          <li> KrishD1</li>
-          <li> TushartD1</li>
-          <li> SabeenD1</li>
-          <li> PrishaD1</li>
-          <li> PinakD1</li>
-           -->
-
+        <div class="h"><h2>Your Events</h2></div>
+        <ul class="lis">
+          <li>
+            <h3 id="hs">Code:</h3>
+            <p id="hsc">123Aryaa</p> 
+            <!-- <h3>Event Title (Signed Up)</h3>
+            <p>Event Description</p>
+            <p>Date and Time</p> -->
+        
+          </li>
         </ul>
       </div>
     </div>
   </div>
 
-  <script src="Listings2.js"></script>
+  <script src="Listings.js"></script>
 </body>
 </html>
