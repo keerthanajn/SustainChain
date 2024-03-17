@@ -5,7 +5,7 @@
 ## Getting Started
 Clone the repository using link
 ```
-https://github.com/keerthanajn/SustainChain.git
+[https://github.com/keerthanajn/SustainChain.git](https://github.com/keerthanajn/SustainChain.git)
 ```
 ### TO RUN THE SERVER
 ```bash
