@@ -153,33 +153,17 @@ class getalltokens(APIView):
 
 class whitelist(APIView):
     def update_whitelist(request):
-        user = Login.objects.all()
-        signedup = SignedupList.objects.all()
-        num_json = []
-        
-        nd = []
-        sd = []
-        ud = []
-        for u in user:
-            projects = Project.objects.filter(user=u)
-            project_count = projects.count()
-            print(project_count)
-            ud.append(u.username)
-            nd.append(project_count)
-
-
-        for p in projects:
-            signed_count = SignedupList.objects.filter(projectID=p).count()
-            sd.append(signed_count)
-        
-        for i in range(len(ud)):
-            num_data={
-                'user': ud[i],
-                'numprojects': nd[i],
-                'numofsignups': sd[i],
+        whiteList = Whitelist.objects.all()
+            # Serialize project objects to JSON
+         whiteList_json = []
+        for whiteItem in whiteList:
+            whiteItem _data = {
+                'user': whiteItem.username,
+                'walletAddress': whiteItem.walletAddress
+                
             }
-            num_json.append(num_data)
-        return JsonResponse(num_json, safe=False)
+            whiteList_json.append(whiteItem_data)
+        return JsonResponse(whiteList_json, safe=False)
 
 
     # Get the user's projects
